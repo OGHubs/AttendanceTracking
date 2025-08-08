@@ -1,0 +1,33 @@
+[project]
+name = "Attendance Tracking System"
+version = "0.1.0"
+description = "An Attendance Tracking System "
+
+requires-python = ">=3.10"
+
+dependencies = [
+  "fastapi",
+  "django",
+  "streamlit",
+  "transformers",
+  "pandas",
+  "openai",
+  "sqlalchemy",
+  "uvicorn",
+  "python-dotenv",
+  "requests",
+  "pydantic"
+]
+
+[project.optional-dependencies]
+dev = [
+  "black",
+  "pytest",
+  "ruff",
+  "mypy",
+  "pre-commit"
+]
+
+[build-system]
+requires = ["uv"]
+build-backend = "uv.build"
