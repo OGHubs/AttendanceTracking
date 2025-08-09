@@ -1,3 +1,4 @@
+
 from typing import AsyncGenerator
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import sessionmaker
@@ -34,3 +35,4 @@ async def get_db() -> AsyncGenerator[AsyncSession, None]:
 
 async def get_session() -> AsyncSession:
     return SessionLocal()
+
