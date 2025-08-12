@@ -1,5 +1,5 @@
 [project]
-name = "Attendance Tracking System"
+name = "attendance"
 version = "0.1.0"
 description = "An Attendance Tracking System "
 
@@ -7,21 +7,16 @@ requires-python = ">=3.10"
 
 dependencies = [
   "fastapi",
-  "django",
-  "streamlit",
-  "transformers",
-  "pandas",
-  "openai",
   "sqlalchemy",
   "uvicorn",
   "python-dotenv",
-  "requests",
-  "pydantic"
+  "pydantic",
+  "pydantic-settings",
+  "psycopg[binary]",
 ]
 
 [project.optional-dependencies]
 dev = [
-  "black",
   "pytest",
   "ruff",
   "mypy",
@@ -29,5 +24,9 @@ dev = [
 ]
 
 [build-system]
-requires = ["uv"]
-build-backend = "uv.build"
+requires = ["uv_build"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "app"
+namespace = true
