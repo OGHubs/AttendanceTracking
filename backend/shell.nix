@@ -33,6 +33,7 @@ pkgs.mkShell {
         pg_ctl -D $PGDATA stop
         cd $PWD
         rm -rf $NIX_SHELL_DIR
+        # rm /tmp/.s.PGSQL.*
       " \
       EXIT
 
@@ -61,6 +62,10 @@ pkgs.mkShell {
       -o "-c log_min_error_statement=info"                  \
       -o "-c log_connections=on"                            \
       start
+
+    createdb -h $PGDATA
+    createdb app -h $PGDATA
+    createuser postgres -s -h $PGDATA
 
     # source local venv
     source .venv/bin/activate

@@ -1,5 +1,4 @@
-from fastapi import APIRouter, Depends
-from sqlalchemy.orm import Session
+from fastapi import APIRouter
 from app.core.db import SessionLocal
 from sqlalchemy import text
 
