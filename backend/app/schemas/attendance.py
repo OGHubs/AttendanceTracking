@@ -15,15 +15,15 @@ class BaseAttendance(BaseModel):
     check_out_time: Optional[datetime] = None
 
 
-class AttendanceCreate(BaseAttendance):
+class CreateAttendance(BaseAttendance):
     pass
 
 
-class AttendanceUpdate(BaseAttendance):
+class UpdateAttendance(BaseAttendance):
     used_qr_registration: Optional[bool] = None
 
 
-class AttendanceResponse(BaseAttendance):
+class ResponseAttendance(BaseAttendance):
     attendance_id: int
     created_at: datetime
     updated_at: datetime

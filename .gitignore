@@ -7,3 +7,4 @@ app.egg-info
 .coverage
 htmlcov
 .cache
+.ruff_cache

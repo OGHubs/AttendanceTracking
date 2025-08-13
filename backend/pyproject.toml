@@ -6,8 +6,8 @@ description = "An Attendance Tracking System "
 requires-python = ">=3.10"
 
 dependencies = [
-  "fastapi",
-  "sqlalchemy",
+  "fastapi[standard]",
+  "sqlalchemy[asyncio]",
   "uvicorn",
   "python-dotenv",
   "pydantic",
@@ -15,7 +15,7 @@ dependencies = [
   "psycopg[binary]",
 ]
 
-[project.optional-dependencies]
+[dependency-groups]
 dev = [
   "pytest",
   "ruff",
